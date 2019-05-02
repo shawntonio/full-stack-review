@@ -25,6 +25,9 @@ massive(CONNECTION_STRING).then(db => {
 })
 
 app.get('/api/users', Ctrl.getUsers)
-
+app.post('/auth/register', Ctrl.register)
+app.post('/auth/login', Ctrl.login)
+app.get('/auth/details', Ctrl.getDetails)
+app.delete('/auth/logout', Ctrl.logout)
 
 
